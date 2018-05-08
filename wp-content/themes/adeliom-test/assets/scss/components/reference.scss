@@ -1,0 +1,73 @@
+$reference-overlay-animation : 0.2s;
+
+.home-second-part{
+  img{
+    top:0;
+    right:0;
+    height: 100%;
+  }
+}
+
+.block-reference{
+  &:before{
+    content:'';
+    width:130px;
+    height: 130px;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/img/doubleTriangle.svg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+.container-reference {
+  .entry-header {
+    overflow: hidden;
+    .reference-overlay{
+      background: rgba($red,0.9);
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all $reference-overlay-animation;
+      z-index: 1;
+      .wording{
+        opacity: 0;
+      }
+      .dash{
+        width: 0;
+        //transform:scale(0);
+        height: 2px;
+        transform-origin: 0;
+
+      }
+    }
+    img {
+      transition: all $reference-overlay-animation;
+      transform: scale(1.1);
+    }
+    .font-h3 {
+      transition: all 0.2s;
+      color: $black
+    }
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+      img {
+        transform: scale(1);
+      }
+      .reference-overlay{
+        opacity: 1;
+      }
+      .font-h3 {
+        color: $red ;
+      }
+    }
+  }
+}
+

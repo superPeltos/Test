@@ -1,0 +1,25 @@
+<svg width="885" height="701" viewBox="0 0 885 701" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Mask Group" opacity="0.8">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="-3" width="885" height="885">
+<g id="Rectangle 2">
+<path d="M 885 0L 0 0L 0 885L 885 0Z" transform="translate(885 -3) scale(-1 1)" fill="#C62A1B"/>
+</g>
+</mask>
+<g mask="url(#mask0)">
+<g id="Rectangle 4">
+<rect width="930" height="705" transform="translate(885 -4) scale(-1 1)" fill="url(#paint0_linear)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+
+<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-497.162 0 -1.73573e-05 -659.401 497.162 689.911)">
+<stop stop-color="#E53232"/>
+<stop offset="1" stop-color="#8C190E"/>
+</linearGradient>
+
+</defs>
+</svg>
+

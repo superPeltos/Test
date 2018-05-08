@@ -1,0 +1,9 @@
+.site-header{
+  z-index: 12;
+}
+
+@include media-breakpoint-down(sm) {
+  .site-header-main{
+    background: white;
+  }
+}

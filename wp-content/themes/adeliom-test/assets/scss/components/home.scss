@@ -1,0 +1,85 @@
+$triangleDeg: 45deg;
+
+.wawTriangle {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+}
+@include media-breakpoint-down(lg) {
+  .wawTriangle {
+    right: -150px;
+  }
+}
+
+
+
+.wawSmallTriangle {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  right: 30%;
+  background-image: url('../../assets/img/triangleWhite.svg');
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.waw-block {
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding-top: 13rem;
+  padding-bottom: 11rem;
+}
+
+//
+
+.separator {
+  &.separator-h {
+    width: 64px;
+    height: 2px;
+  }
+  &.separator-v {
+    width: 2px;
+    height: 60%;
+  }
+}
+
+.home-second-part{
+  background-image:url(../../assets/img/building.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100px;
+  .cpe-block {
+    top: -100px;
+    img {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 3em;
+      width: 100px;
+    }
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-width: 39px 0 0 39px;
+      border-style: solid;
+      border-color: transparent transparent transparent $red;
+      position: absolute;
+      left: 1.7rem;
+      bottom: -15px;
+    }
+    .separator {
+      left: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .wawTriangle {
+    display: none;
+  }
+  .home-second-part{
+    background-position: 0 120%;
+  }
+}

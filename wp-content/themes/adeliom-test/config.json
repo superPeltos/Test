@@ -1,0 +1,22 @@
+{
+  "sass": {
+    "source" : "./assets/scss/",
+    "dest" : "./public/css/"
+  },
+  "js" : {
+    "source" : "./assets/js/",
+    "dest" : "./public/js/"
+  },
+  "img" : {
+    "source" : "./assets/img/",
+    "dest" : "./public/img/"
+  },
+  "icons" : {
+    "source" : "./assets/img/icons/",
+    "dest" : "./public/img/icons/"
+  },
+  "fonts" : {
+    "source" : "./assets/fonts/",
+    "dest" : "./public/fonts/"
+  }
+}

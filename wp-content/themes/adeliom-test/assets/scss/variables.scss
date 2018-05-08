@@ -1,0 +1,68 @@
+/* COLORS */
+$red: #E53232;
+$grey: #F2F2F2;
+$white: #FFFFFF;
+$black: #4A4A4A;
+$blue:#3E444D;
+$unset:unset;
+$colors: (
+        'red': $red,
+        'white': $white,
+        'grey': $grey,
+        'black': $black,
+        'blue': $blue,
+        'unset':unset
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .color-#{$name} {
+    color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color;
+  }
+}
+
+@each $name, $color in $colors {
+
+}
+
+/*
+FONTS
+ */
+$globalFont: 15px;
+$fonts: (
+        'h1': 2.3rem, // 35px
+        'h2': 1.7em, // 26px
+        'h3': 1.3rem, // 18
+        'btn': 0.8rem // 12px
+);
+
+@each $name, $color in $fonts {
+  .font-#{$name} {
+    font-size: $color;
+  }
+}
+
+$font-family-robotSlab : 'Roboto Slab', serif;
+$font-family-karla : 'Karla', sans-serif;
+
+.font-robotSlab{
+  font-family: $font-family-robotSlab;
+}
+.font-karla{
+  font-family: $font-family-karla;
+}
+
+// SPACER
+$spacer: 1rem;
+$spacers : (
+        6: ($spacer * 4),
+        7: ($spacer * 5),
+        8: ($spacer * 6),
+        9: ($spacer * 7),
+        10: ($spacer * 8),
+)

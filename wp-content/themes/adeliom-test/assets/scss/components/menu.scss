@@ -1,0 +1,60 @@
+.menu-item {
+  list-style: none;
+  padding: 0;
+  &.color-white {
+    a {
+      color: $white;
+    }
+  }
+}
+
+#menu-footer-1,
+#menu-footer-2 {
+  padding: 0;
+}
+
+.primary-menu {
+  .menu-item {
+    padding-right: 2rem;
+  }
+  a {
+    color: $white;
+    &.color-white {
+      color: $white;
+    }
+    &.color-blue {
+      color: $blue;
+    }
+  }
+}
+
+
+
+
+.site-header-menu {
+  .color-white {
+    svg {
+      circle {
+        stroke: $white;
+      }
+      path {
+        fill: $white;
+      }
+    }
+  }
+  .color-blue {
+    svg {
+      circle {
+        stroke: $blue;
+      }
+      path {
+        fill: $blue;
+      }
+    }
+  }
+}
+
+.ic-contact {
+  background-image: url('../../assets/img/ic-contact.svg');
+}
+

@@ -1,0 +1,26 @@
+$xy : 100px;
+$xy-xs: 80px;
+
+
+.pre-footer{
+  background-image: url(../../assets/img/bg-footer);
+  background-size: cover;
+  .container-logo{
+    width: $xy;
+    height: $xy;
+    top: calc(-#{$xy} / 2);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .pre-footer{
+    .container-logo{
+      width: $xy-xs;
+      height: $xy-xs;
+      top: calc(-#{$xy-xs} / 2);
+    }
+  }
+}

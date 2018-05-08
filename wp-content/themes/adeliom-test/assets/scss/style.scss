@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Karla|Roboto+Slab');
+
+@import "../../assets/scss/variables.scss";
+@import "../../vendor/twbs/bootstrap/scss/bootstrap.scss";
+
+@import "helper/text.scss";
+@import "helper/btn.scss";
+@import "helper/position.scss";
+
+@import "components/header.scss";
+@import "components/menu.scss";
+@import "components/home.scss";
+@import "components/reference.scss";
+@import "components/footer.scss";
+
+
+html,body{
+  font-size: $globalFont;
+  font-family: $font-family-karla;
+}
+
+@include media-breakpoint-down(lg) {
+  html,body{
+    font-size: 12px;
+  }
+  .font-basic{
+    font-size: 15px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  html,body{
+    font-size: 10px;
+  }
+}
