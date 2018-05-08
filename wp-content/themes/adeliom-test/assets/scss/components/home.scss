@@ -7,11 +7,6 @@ $triangleDeg: 45deg;
   height: 100%;
   width: auto;
 }
-@include media-breakpoint-down(lg) {
-  .wawTriangle {
-    right: -150px;
-  }
-}
 
 
 
@@ -31,6 +26,18 @@ $triangleDeg: 45deg;
   background-position: 50% 50%;
   padding-top: 13rem;
   padding-bottom: 11rem;
+  &:before{
+    content:'';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 242, 242, 0.5);
+    position: absolute;
+    display: none;
+  }
 }
 
 //
@@ -46,8 +53,8 @@ $triangleDeg: 45deg;
   }
 }
 
-.home-second-part{
-  background-image:url(../../assets/img/building.png);
+.home-second-part {
+  background-image: url(../../assets/img/building.png);
   background-repeat: no-repeat;
   background-position: 100% 100px;
   .cpe-block {
@@ -74,12 +81,40 @@ $triangleDeg: 45deg;
     }
   }
 }
+@include media-breakpoint-down(xl) {
+  .wawTriangle {
+    right: -5%;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .wawTriangle {
+    right: -10%;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .wawTriangle {
+    right: -20%;
+  }
+  .container-ic {
+    svg {
+      width: 50px;
+    }
+  }
+}
 
 @include media-breakpoint-down(sm) {
+  .waw-block{
+    &:before{
+      display: inline-block;
+    }
+  }
+
   .wawTriangle {
     display: none;
   }
-  .home-second-part{
+  .home-second-part {
     background-position: 0 120%;
   }
 }

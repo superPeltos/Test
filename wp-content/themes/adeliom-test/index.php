@@ -51,9 +51,9 @@ $cpeTitle = get_the_title($cpeId);
                 <div class="position-absolute wawSmallTriangle"></div>
 
                 <div class="container">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-lg-6 col-md-10">
                         <div class="d-flex align-items-center">
-                            <div class="d-sm-block d-none">
+                            <div class="d-md-block d-none container-ic">
                               <?php echo $wawPicto; ?>
                             </div>
                             <div class="ml-2">
@@ -81,13 +81,13 @@ $cpeTitle = get_the_title($cpeId);
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/cpe-dtriangle.svg" alt=""
                          class="position-absolute">
                     <div class="row py-6 px-7">
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-md-6">
                             <div class="d-flex">
-                              <div class="d-none d-sm-block"><?php echo $cpePicto; ?></div>
-                                <h2 class="ml-0 ml-sm-5 font-h2 color-red"><?php echo $cpeCustomTitle; ?></h2>
+                              <div class="d-none d-md-block container-ic"><?php echo $cpePicto; ?></div>
+                                <h2 class="ml-0 ml-md-5 font-h2 color-red"><?php echo $cpeCustomTitle; ?></h2>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 position-relative ">
+                        <div class="col-12 col-md-6 position-relative ">
                             <span class="separator separator-v position-absolute bg-red "></span>
                           <div class="font-basic"><?php echo $cpeCustomContent; ?></div>
                         </div>

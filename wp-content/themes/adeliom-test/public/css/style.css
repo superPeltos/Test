@@ -10360,6 +10360,16 @@ a.text-dark:focus {
   font-family: 'Roboto Slab', serif;
 }
 
+@media (max-width: 767.98px) {
+  .color-blue-xs svg circle {
+    stroke: #3e444d !important;
+  }
+
+  .color-blue-xs svg path {
+    fill: #3e444d !important;
+  }
+}
+
 .btn-rounded {
   border-radius: 15px;
 }
@@ -10437,15 +10447,46 @@ a.text-dark:focus {
   .position-relative-xs {
     position: relative !important;
   }
+
+  .position-absolute-xs {
+    position: absolute !important;
+  }
+}
+
+.mx-sm-auto {
+  margin: unset;
+}
+
+@media (max-width: 767.98px) {
+  .mx-sm-auto {
+    margin: 0 auto;
+  }
 }
 
 .site-header {
   z-index: 12;
 }
 
+.site-header img {
+  width: unset;
+}
+
+.container-contact {
+  right: 0;
+}
+
 @media (max-width: 767.98px) {
   .site-header-main {
     background: white;
+  }
+
+  .site-header img {
+    width: auto;
+    height: 45px;
+  }
+
+  .container-contact {
+    right: 1rem;
   }
 }
 
@@ -10479,24 +10520,95 @@ a.text-dark:focus {
   color: #3e444d;
 }
 
-.site-header-menu .color-white svg circle {
+.site-header-main {
+  height: 80px;
+}
+
+.site-header-main .color-white svg circle {
   stroke: #fff;
 }
 
-.site-header-menu .color-white svg path {
+.site-header-main .color-white svg path {
   fill: #fff;
 }
 
-.site-header-menu .color-blue svg circle {
+.site-header-main .color-blue svg circle {
   stroke: #3e444d;
 }
 
-.site-header-menu .color-blue svg path {
+.site-header-main .color-blue svg path {
   fill: #3e444d;
 }
 
 .ic-contact {
   background-image: url('../../assets/img/ic-contact.svg');
+}
+
+.collapse {
+  display: block;
+}
+
+.menu-nav {
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .site-header-main {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .collapse {
+    display: none;
+  }
+
+  .site-header {
+    background: white;
+  }
+
+  .site-header-menu {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: white;
+  }
+
+  .primary-menu a {
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+    color: #3e444d;
+  }
+
+  .primary-menu a:hover {
+    color: #e53232;
+    background: #f2f2f2;
+  }
+
+  .menu-nav {
+    height: 100vh;
+  }
+
+  .container-btn-close {
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 20%;
+    max-width: 60px;
+    height: 100vh;
+    padding-top: 1.5rem;
+    transition: all .2s;
+    -webkit-transform: translateX(250%);
+            transform: translateX(250%);
+  }
+
+  .container-btn-close.open {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 
 .wawTriangle {
@@ -10505,12 +10617,6 @@ a.text-dark:focus {
   bottom: 0;
   width: auto;
   height: 100%;
-}
-
-@media (max-width: 1199.98px) {
-  .wawTriangle {
-    right: -150px;
-  }
 }
 
 .wawSmallTriangle {
@@ -10530,6 +10636,19 @@ a.text-dark:focus {
   padding-bottom: 11rem;
   background-position: 50% 50%;
   background-size: cover;
+}
+
+.waw-block:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: rgba(242, 242, 242, .5);
 }
 
 .separator.separator-h {
@@ -10576,7 +10695,31 @@ a.text-dark:focus {
   left: 0;
 }
 
+.wawTriangle {
+  right: -5%;
+}
+
+@media (max-width: 1199.98px) {
+  .wawTriangle {
+    right: -10%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wawTriangle {
+    right: -20%;
+  }
+
+  .container-ic svg {
+    width: 50px;
+  }
+}
+
 @media (max-width: 767.98px) {
+  .waw-block:before {
+    display: inline-block;
+  }
+
   .wawTriangle {
     display: none;
   }
@@ -10657,6 +10800,12 @@ a.text-dark:focus {
 
 .container-reference a:hover .font-h3 {
   color: #e53232;
+}
+
+@media (max-width: 767.98px) {
+  .reference-overlay {
+    font-size: 15px;
+  }
 }
 
 .pre-footer {

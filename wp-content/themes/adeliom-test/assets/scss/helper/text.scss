@@ -1,11 +1,24 @@
-.text-base{
+.text-base {
   font-size: 1rem;
 }
 
-.font-h1{
+.font-h1 {
   font-family: $font-family-robotSlab;
 }
 
-.font-h2{
+.font-h2 {
   font-family: $font-family-robotSlab;
+}
+
+@include media-breakpoint-down(sm) {
+  .color-blue-xs {
+    svg {
+      circle {
+        stroke: $blue !important;
+      }
+      path {
+        fill: $blue !important;
+      }
+    }
+  }
 }

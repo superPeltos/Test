@@ -7,14 +7,15 @@
     anim.remove(siteHeader[0]);
   };
   var headerAnimeScroll = function (scroll) {
+    var duration = 500;
     if (scroll > 20) {
-      var duration = 150;
+
       siteHeader.find('a').addClass('color-blue');
       siteHeader.find('a').removeClass('color-white');
       removeAnimElem();
       anim({
-        targets: siteHeader.find('img')[0],
-        width: '50px',
+        targets: siteHeader.find('.site-header-main')[0],
+        height: '60px',
         duration: duration,
         easing: 'easeInQuad',
       });
@@ -29,8 +30,8 @@
       siteHeader.find('a').removeClass('color-blue');
       removeAnimElem();
       anim({
-        targets: siteHeader.find('img')[0],
-        width: '100px',
+        targets: siteHeader.find('.site-header-main')[0],
+        height: '80px',
         duration: duration,
         easing: 'easeInQuad'
       });
@@ -45,12 +46,15 @@
 
   function initHeaderScroll() {
     $(window).unbind("scroll.event");
-    if ($(window).innerWidth() > 640) {
+    if ($(window).innerWidth() > 767) {
+      siteHeader.css('background','unset');
       $(window).on('scroll.event', function (event) {
         console.log('launch');
         var scroll = $(window).scrollTop();
         headerAnimeScroll(scroll);
       })
+    }else{
+      siteHeader.css('background','white');
     }
   }
 

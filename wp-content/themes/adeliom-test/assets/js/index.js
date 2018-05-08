@@ -1,7 +1,26 @@
+
 (function($) {
+
+
   var anim = require('./contrib/anime.js');
   var referenceImg = $('.referenceImage')[0];
   require('./headerScroll.js');
+
+  $('.btn-menu').on('click',function(event){
+    event.preventDefault();
+    $(this).css('opacity',0);
+    $('.site-header-menu').collapse('show');
+    $('.container-btn-close').addClass('open');
+  });
+
+  $('.btn-menu-close').on('click',function(event){
+    event.preventDefault();
+    $('.btn-menu').css('opacity',1);
+    $('.site-header-menu').collapse('hide');
+    $('.container-btn-close').removeClass('open');
+  });
+
+
 
 
   function animateDash(elem,scale, duration, elasticity) {

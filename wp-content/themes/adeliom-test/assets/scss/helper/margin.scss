@@ -1,0 +1,9 @@
+.mx-sm-auto{
+  margin: unset;
+}
+
+@include media-breakpoint-down(sm){
+  .mx-sm-auto{
+    margin: 0 auto;
+  }
+}

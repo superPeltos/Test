@@ -1,9 +1,27 @@
 .site-header{
   z-index: 12;
+  img{
+    width: unset;
+  }
 }
+
+.container-contact{
+  right:0;
+}
+
+
 
 @include media-breakpoint-down(sm) {
   .site-header-main{
     background: white;
+  }
+  .site-header{
+      img{
+        height: 45px;
+        width: auto;
+      }
+  }
+  .container-contact{
+    right: 1rem;
   }
 }

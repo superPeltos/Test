@@ -31,7 +31,8 @@
 
 
 
-.site-header-menu {
+.site-header-main {
+  height: 80px;
   .color-white {
     svg {
       circle {
@@ -56,5 +57,67 @@
 
 .ic-contact {
   background-image: url('../../assets/img/ic-contact.svg');
+}
+
+.collapse{
+  display: block;
+}
+
+.menu-nav{
+  height: auto;
+}
+
+@include media-breakpoint-down(sm){
+  .site-header-main{
+    max-width: 100%;
+  }
+}
+
+@include media-breakpoint-down(sm){
+
+  .collapse{
+    display: none;
+  }
+  .site-header{
+    background: white;
+  }
+  .site-header-menu{
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 80px;
+    right: 0;
+
+  }
+  .primary-menu{
+    a{
+      color: $blue;
+      font-size: 14px;
+      display: inline-block;
+      padding: 2rem;
+      width: 100%;
+      &:hover{
+        background: $grey;
+        color: $red;
+      }
+    }
+  }
+  .menu-nav{
+    height: 100vh;
+  }
+  .container-btn-close{
+    height: 100vh;
+    width: 20%;
+    max-width: 60px;
+    padding-top: 1.5rem;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    transform: translateX(250%);
+    transition: all 0.2s;
+    &.open{
+      transform: translateX(0%);
+    }
+  }
 }
 
