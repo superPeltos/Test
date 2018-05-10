@@ -9,6 +9,8 @@
  * @since Twenty Sixteen 1.0
  */
 
+$logo =  get_field('logo', 'option');
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -29,16 +31,16 @@
                 <div class="site-branding mx-auto mx-md-0">
 
                   <?php if (is_front_page() && is_home()) : ?>
-                      <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                      <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home" title="Accueil">
                               <img class="img-fluid"
-                                   src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.png"
-                                   alt="?"/>
+                                   src="<?php echo $logo['url'] ?>"
+                                   alt="logo"/>
                           </a></h1>
                   <?php else : ?>
-                      <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                      <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home" title="Accueil">
                               <img class="img-fluid"
-                                   src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.png"
-                                   alt="?"/>
+                                   src="<?php echo $logo['url']?>"
+                                   alt="logo"/>
                           </a></p>
                   <?Php endif ?>
                 </div><!-- .site-branding -->
@@ -104,7 +106,7 @@
 
                       </a>
                   </div>
-                  <a class="position-absolute color-blue-xs container-contact" href="<?php echo get_permalink($pageContact->ID) ?>">
+                  <a class="position-absolute color-blue-xs container-contact" href="<?php echo get_permalink($pageContact->ID) ?>" title="<?php echo get_the_title($pageContact->ID) ?>">
                       <svg width="40" height="40" viewBox="0 0 40 40" version="1.1"
                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g id="Canvas" fill="none">

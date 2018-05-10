@@ -15,12 +15,14 @@ $triangleDeg: 45deg;
   height: 100px;
   top: 50%;
   right: 30%;
+
   background-image: url('../../assets/img/triangleWhite.svg');
   background-repeat: no-repeat;
   transform: translateY(-50%);
 }
 
 .waw-block {
+  background-attachment: fixed;
   overflow: hidden;
   background-size: cover;
   background-position: 50% 50%;

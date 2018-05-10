@@ -4,10 +4,12 @@
 @import "../../assets/scss/variables.scss";
 @import "../../vendor/twbs/bootstrap/scss/bootstrap.scss";
 
+@import "helper/mixins.scss";
 @import "helper/text.scss";
 @import "helper/btn.scss";
 @import "helper/position.scss";
 @import "helper/margin.scss";
+@import "helper/link.scss";
 
 @import "components/header.scss";
 @import "components/menu.scss";

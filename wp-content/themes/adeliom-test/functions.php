@@ -97,3 +97,9 @@ function register_mp_menus()
 }
 
 add_action('init', 'register_mp_menus');
+
+if( function_exists('acf_add_options_page') ) {
+
+  acf_add_options_page();
+
+}

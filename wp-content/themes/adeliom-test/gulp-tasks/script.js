@@ -5,20 +5,11 @@ var plugins = require('gulp-load-plugins')(); // tous les plugins de package.jso
 var browserify = require('gulp-browserify');
 
 
-// Tâche "js" = uglify + concat
-/*gulp.task('js', function() {
-  return gulp.src(config.js.source + '*.js')
-      .pipe(plugins.plumber({
-          errorHandler:
-             plugins.notify.onError("Error: <%= error.message %>")
-      }))
-//    .pipe(plugins.uglify())
-    .pipe(plugins.concat('global.min.js'))
-    .pipe(gulp.dest(config.js.dest));
-});*/
+
 
 gulp.task('js', function () {
   return gulp.src(config.js.source + '*.js')
+
     .pipe(browserify({
       insertGlobals: true,
       debug: !gulp.env.production
@@ -27,9 +18,8 @@ gulp.task('js', function () {
       errorHandler:
         plugins.notify.onError("Error: <%= error.message %>")
     }))
-    //    .pipe(plugins.uglify())
-    //.pipe(plugins.concat('global.min.js'))
-    //.pipe(plugins.uglify())
+
+
     .pipe(gulp.dest(config.js.dest));
 });
 

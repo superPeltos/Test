@@ -1,0 +1,13 @@
+a {
+
+  &:hover {
+    text-decoration: none;
+    &.color-white {
+      color: $white;
+    }
+  }
+}
+
+.hvr-to-top {
+@include hvrTop($red);
+}

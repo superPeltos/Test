@@ -13,35 +13,63 @@
   padding: 0;
 }
 
+#menu-footer-1,
+#menu-footer-2 {
+  a{
+    @include hvrTop($red);
+  }
+}
+
 .primary-menu {
   .menu-item {
-    padding-right: 2rem;
+    margin-right: 2rem;
   }
   a {
     color: $white;
+    text-decoration: none;
+    transition: all 0.5s;
+    @include hvrTop($white);
     &.color-white {
       color: $white;
+      @include hvrTop($white);
     }
     &.color-blue {
       color: $blue;
+      @include hvrTop($red);
     }
   }
 }
 
-
-
-
 .site-header-main {
   height: 80px;
+  svg{
+    path,
+    circle{
+      transition: all 0.5s;
+    }
+    &:hover{
+      &:hover{
+        circle {
+          stroke: $red;
+        }
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
   .color-white {
     svg {
+
       circle {
         stroke: $white;
       }
       path {
         fill: $white;
       }
+
     }
+
   }
   .color-blue {
     svg {
@@ -59,29 +87,29 @@
   background-image: url('../../assets/img/ic-contact.svg');
 }
 
-.collapse{
+.collapse {
   display: block;
 }
 
-.menu-nav{
+.menu-nav {
   height: auto;
 }
 
-@include media-breakpoint-down(sm){
-  .site-header-main{
+@include media-breakpoint-down(sm) {
+  .site-header-main {
     max-width: 100%;
   }
 }
 
-@include media-breakpoint-down(sm){
+@include media-breakpoint-down(sm) {
 
-  .collapse{
+  .collapse {
     display: none;
   }
-  .site-header{
+  .site-header {
     background: white;
   }
-  .site-header-menu{
+  .site-header-menu {
     position: fixed;
     width: 100%;
     background: white;
@@ -89,23 +117,23 @@
     right: 0;
 
   }
-  .primary-menu{
-    a{
-      color: $blue;
+  .primary-menu {
+    a {
+      color: $blue !important;
       font-size: 14px;
       display: inline-block;
       padding: 2rem;
       width: 100%;
-      &:hover{
+      &:hover {
         background: $grey;
         color: $red;
       }
     }
   }
-  .menu-nav{
+  .menu-nav {
     height: 100vh;
   }
-  .container-btn-close{
+  .container-btn-close {
     height: 100vh;
     width: 20%;
     max-width: 60px;
@@ -115,7 +143,7 @@
     top: 0;
     transform: translateX(250%);
     transition: all 0.2s;
-    &.open{
+    &.open {
       transform: translateX(0%);
     }
   }

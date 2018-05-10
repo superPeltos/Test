@@ -7,7 +7,7 @@
     anim.remove(siteHeader[0]);
   };
   var headerAnimeScroll = function (scroll) {
-    var duration = 500;
+    var duration = 250;
     if (scroll > 20) {
 
       siteHeader.find('a').addClass('color-blue');

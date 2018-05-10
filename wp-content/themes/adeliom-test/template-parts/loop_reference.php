@@ -9,7 +9,7 @@
 ?>
 
 <article class="col-12 col-sm-4 reference mb-5 mb-sm-0" id="post-<?php the_ID(); ?>">
-    <a href="">
+    <a href="<?php echo get_the_permalink(get_the_ID());?>" title="<?php the_title()?>">
         <div class="bg-white">
 
             <header class="entry-header position-relative">
@@ -19,7 +19,7 @@
                         <span class="wording color-white vertical-align text-uppercase"> Découvrir plus</span>
                     </div>
                 </div>
-                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="img-fluid w-100 referenceImage">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="visuel <?php the_title(); ?>" class="img-fluid w-100 referenceImage">
             </header><!-- .entry-header -->
 
 

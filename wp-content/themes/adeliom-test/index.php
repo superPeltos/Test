@@ -53,7 +53,7 @@ $cpeTitle = get_the_title($cpeId);
                 <div class="container">
                     <div class="col-12 col-lg-6 col-md-10">
                         <div class="d-flex align-items-center">
-                            <div class="d-md-block d-none container-ic">
+                            <div class="d-md-block d-none container-ic mr-2">
                               <?php echo $wawPicto; ?>
                             </div>
                             <div class="ml-2">
@@ -65,7 +65,7 @@ $cpeTitle = get_the_title($cpeId);
                             <div class="font-basic"><?php echo $wawCustomContent; ?></div>
                         </div>
                         <div class="mb-5">
-                            <a class="text-uppercase btn font-btn bg-red color-white px-4 py-2 btn-rounded" href=""
+                            <a class="text-uppercase btn font-btn bg-red color-white px-4 py-2 btn-rounded"  href="<?php echo get_the_permalink($cpeId)?>"
                                title="">
                               <?php echo $wawTitle ?>
                             </a>
@@ -93,8 +93,8 @@ $cpeTitle = get_the_title($cpeId);
                         </div>
                     </div>
                     <div class="position-absolute  btn-cpe text-uppercase">
-                        <a class=" btn-rounded bg-red px-4 py-2  color-white font-btn btn" href=""
-                           title=""><?php echo $cpeTitle ?></a>
+                        <a class=" btn-rounded bg-red px-4 py-2  color-white font-btn btn" href="<?php echo get_the_permalink($cpeId)?>"
+                           title="<?php echo $cpeTitle ?>"><?php echo $cpeTitle ?></a>
                     </div>
                 </div>
             </div>

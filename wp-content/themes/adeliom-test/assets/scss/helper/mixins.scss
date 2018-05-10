@@ -1,0 +1,24 @@
+@mixin hvrTop($color){
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+  }
+  &:hover {
+    &:before {
+      transform: scaleY(0.1);
+    }
+  }
+}

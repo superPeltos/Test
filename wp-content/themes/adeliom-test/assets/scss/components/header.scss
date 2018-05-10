@@ -1,5 +1,6 @@
 .site-header{
   z-index: 12;
+  transition: all 0.5s;
   img{
     width: unset;
   }
@@ -12,7 +13,7 @@
 
 
 @include media-breakpoint-down(sm) {
-  .site-header-main{
+  .site-header-ma*in{
     background: white;
   }
   .site-header{
